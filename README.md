@@ -14,6 +14,7 @@ Welcome to the OOPs (Object-Oriented Programming System) repository. This reposi
 2. [Encapsulation](#encapsulation)
 3. [Constructor](#constructor)
 4. [Destructor](#destructor)
+5. [Inheritance](#inheritance)
 
 ## Basics of OOP
 
@@ -51,3 +52,21 @@ A destructor is a special member function that is called automatically when an o
 
 - **Syntax**: `~ClassName() {}`
 - **Dynamic Memory Deletion**: Use the `delete` keyword inside destructor function to deallocate memory allocated with `new`, and `delete[]` for arrays.
+
+## Inheritance
+
+Inheritance is a core principle of OOP that allows a class to inherit the properties and methods of another class. Key benefits include:
+
+- **Types**
+
+  1. Single Inheritance: A class can inherit from only one class.
+  2. Multiple Inheritance: A class can inherit from multiple classes.
+  3. Multilevel Inheritance: A class inherits from a derived class, creating a parent-child-grandchild relationship.
+  4. Hierarchical Inheritance: Multiple classes inherit from a single base class.
+  5. Hybrid Inheritance: Combination of two or more types of inheritance.
+
+- **Benefits**
+  1. **Code Reuse**: Inheritance allows code to be reused by creating a base class and derived classes.
+  2. **Code Reduction**: Reduced code by eliminating redundant code.
+  3. **Code Maintenance**: Reduced code by eliminating redundant code.
+  4. **Code Extensibility**: Reduced code by eliminating redundant code.
