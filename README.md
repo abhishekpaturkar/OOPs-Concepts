@@ -1,6 +1,6 @@
 # OOPs Repository
 
-Welcome to the OOPs (Object-Oriented Programming System) repository. This repository is organized into three main sections to help you understand the fundamentals of OOP, encapsulation, and constructors.
+Welcome to the Object-Oriented Programming (OOP) Mastery Hub! This repository is your comprehensive guide to mastering OOP concepts, featuring in-depth sections on core principles, practical implementations, and advanced techniques. Dive into our carefully curated content to elevate your programming skills and apply OOP effectively in real-world scenarios.
 
 ## Connect with Me
 
