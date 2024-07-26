@@ -13,6 +13,7 @@ Welcome to the OOPs (Object-Oriented Programming System) repository. This reposi
 1. [Basics of OOP](#basics-of-oop)
 2. [Encapsulation](#encapsulation)
 3. [Constructor](#constructor)
+4. [Destructor](#destructor)
 
 ## Basics of OOP
 
@@ -43,3 +44,10 @@ Constructor is a special member function that initializes an object when it is c
 - **Constructor Overloading**: A constructor that can take multiple parameters.
 - **Shallow Copy**: A constructor that creates a new object by copying an existing object's data.
 - **Deep Copy**: A constructor that creates a new object by copying an existing object's data and also the dynamic memory the object point to.
+
+## Destructor
+
+A destructor is a special member function that is called automatically when an object is destroyed or goes out of scope, used for cleanup operations.
+
+- **Syntax**: `~ClassName() {}`
+- **Dynamic Memory Deletion**: Use the `delete` keyword inside destructor function to deallocate memory allocated with `new`, and `delete[]` for arrays.
