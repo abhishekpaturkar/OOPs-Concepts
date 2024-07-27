@@ -68,49 +68,56 @@ Inheritance is a core principle of OOP that allows a class to inherit the proper
   4. Hierarchical Inheritance: Multiple classes inherit from a single base class.
   5. Hybrid Inheritance: Combination of two or more types of inheritance.
 
-- **Diamond Problem**:
-  The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that have a common base class. This can lead to ambiguity and potential issues with duplicate inheritance.
+# Diamond Problem
 
-  Example:
+The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that have a common base class. This can lead to ambiguity and potential issues with duplicate inheritance.
 
-```
-  A
-  / \
-  B C
-  \ /
-  D
-```
+## Example
 
-Here, class D inherits from both B and C, which both inherit from A. This can cause confusion about which version of A's methods D should use.
+A
+/ \
+B C
+\ /
+D
 
-How to fix:
+In this diagram, class D inherits from both B and C, which both inherit from A. This can cause confusion about which version of A's methods D should use.
 
-1. Use virtual inheritance: When defining classes B and C, use the `virtual` keyword:
+## How to Fix
 
-   class B : virtual public A { ... };
-   class C : virtual public A { ... };
+### 1. Use Virtual Inheritance
 
-   This ensures only one instance of A is inherited by D.
+When defining classes B and C, use the `virtual` keyword:
 
-2. Explicitly specify which version to use: In class D, explicitly state which version of the method to use:
+class B : virtual public A { ... };
+class C : virtual public A { ... };
 
-   class D : public B, public C {
-   void someMethod() {
-   B::someMethod(); // Use B's version
-   }
-   };
+This ensures only one instance of A is inherited by D.
 
-3. Override the method in the derived class: Provide a new implementation in class D that resolves the ambiguity:
+### 2. Explicitly Specify Which Version to Use
 
-   class D : public B, public C {
-   void someMethod() {
-   // New implementation that may call B::someMethod() or C::someMethod()
-   }
-   };
+In class D, explicitly state which version of the method to use:
 
-4. Use composition instead of multiple inheritance: Redesign the class hierarchy to avoid multiple inheritance altogether.
+class D : public B, public C {
+void someMethod() {
+B::someMethod(); // Use B's version
+}
+};
 
-- **Benefits**
+### 3. Override the Method in the Derived Class
+
+Provide a new implementation in class D that resolves the ambiguity:
+
+class D : public B, public C {
+void someMethod() {
+// New implementation that may call B::someMethod() or C::someMethod()
+}
+};
+
+### 4. Use Composition Instead of Multiple Inheritance
+
+Redesign the class hierarchy to avoid multiple inheritance altogether.
+
+- **Benefits of Inheritance**
   1. **Code Reuse**: Inheritance allows code to be reused by creating a base class and derived classes.
   2. **Code Reduction**: Reduced code by eliminating redundant code.
   3. **Code Maintenance**: Reduced code by eliminating redundant code.
