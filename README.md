@@ -74,11 +74,13 @@ The Diamond Problem occurs in multiple inheritance when a class inherits from tw
 
 ## Example
 
-A
+```
+ A
 / \
 B C
 \ /
-D
+ D
+```
 
 In this diagram, class D inherits from both B and C, which both inherit from A. This can cause confusion about which version of A's methods D should use.
 
