@@ -15,6 +15,7 @@ Welcome to the Object-Oriented Programming (OOP) Mastery Hub! This repository is
 3. [Constructor](#constructor)
 4. [Destructor](#destructor)
 5. [Inheritance](#inheritance)
+6. [Polymorphism](#polymorphism)
 
 ## Basics of OOP
 
@@ -70,3 +71,17 @@ Inheritance is a core principle of OOP that allows a class to inherit the proper
   2. **Code Reduction**: Reduced code by eliminating redundant code.
   3. **Code Maintenance**: Reduced code by eliminating redundant code.
   4. **Code Extensibility**: Reduced code by eliminating redundant code.
+
+## Polymorphism
+
+Polymorphism is the ability of objects of different classes to respond to the same method call in different ways, allowing for flexible and extensible code.
+
+- **Compile Time**: Achieved through function overloading and operator overloading, resolved at compile time.
+
+  1. **Constructor Overloading**: Classical example of complie-time polymorphism
+  2. **Function Overloading**: Multiple functions with the same name but different parameters.
+  3. **Operator Overloading**: Redefining operators for custom types to provide intuitive behavior.
+
+- **Run Time**: Achieved through virtual functions and inheritance, allowing objects to be treated as instances of their base class and the appropriate method to be called based on the actual object type at runtime.
+  1. **Function Overriding**: Redefining a base class method in a derived class with the same signature.
+  2. **Virtual Function**: A function declared in a base class that can be overridden in derived classes, enabling runtime polymorphism. Declare with keyword `virtual` with function in base class.
