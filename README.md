@@ -18,6 +18,7 @@ Welcome to the Object-Oriented Programming (OOP) Mastery Hub! This repository is
 6. [Polymorphism](#polymorphism)
 7. [Abstraction]($abstraction)
 8. [Static Keyword](#static-keyword)
+9. [Friend Concept](#friend-concept)
 
 ## Basics of OOP
 
@@ -162,3 +163,31 @@ The `static` keyword in C++ is used to declare class members that belong to the 
   3. **Global static variable**: Limited to the file it's declared in, not accessible from other files.
 
 - **Static Object**: An object with program-wide lifetime, initialized once and retaining its value between function calls. Useful for maintaining state or creating singletons, but requires careful use due to memory consumption and potential threading issues. Declaration `static class-name obeject`
+
+## Friend-Concept
+
+The friend concept in C++ allows a function or class to access private and protected members of another class, bypassing normal access restrictions.
+
+- **Friend Function**: A non-member function that has access to private and protected members of a class.
+
+  - This function is declared inside the class using the `friend` keyword.
+  - It can access private and protected members of the class, but is not a member function.
+  - Useful for operations that need access to internals of two different classes.
+
+- **Friend Class**: A class that has access to private and protected members of another class.
+
+  - The entire class is declared as a friend inside another class.
+  - All member functions of the friend class can access private and protected members of the other class.
+  - Helpful for implementing closely related classes that need to work together.
+
+- **Syntax**:
+
+  - For friend function: `friend return_type function_name(parameters);`
+  - For friend class: `friend class ClassName;`
+
+- **Important Things to Remember**:
+  - You need to declare friendship separately for each class.
+  - If Class A is friends with Class B, it doesn't mean Class B is automatically friends with Class A.
+  - If Class A is friends with Class B, and Class B is friends with Class C, it doesn't mean Class A is friends with Class C.
+  - When a class inherits from another class, it doesn't inherit its friendships.
+  - While friends are useful, they can make your code less secure if overused, so use them carefully.
