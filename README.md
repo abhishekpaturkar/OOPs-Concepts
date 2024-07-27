@@ -68,11 +68,9 @@ Inheritance is a core principle of OOP that allows a class to inherit the proper
   4. Hierarchical Inheritance: Multiple classes inherit from a single base class.
   5. Hybrid Inheritance: Combination of two or more types of inheritance.
 
-# Diamond Problem
+- **Diamond Problem**: The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that have a common base class. This can lead to ambiguity and potential issues with duplicate inheritance.
 
-The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that have a common base class. This can lead to ambiguity and potential issues with duplicate inheritance.
-
-## Example
+  **Example**
 
 ```
  A
@@ -84,40 +82,42 @@ B C
 
 In this diagram, class D inherits from both B and C, which both inherit from A. This can cause confusion about which version of A's methods D should use.
 
-## How to Fix
+**How to Fix**
 
-### 1. Use Virtual Inheritance
+1. **Use Virtual Inheritance**
+   When defining classes B and C, use the `virtual` keyword:
 
-When defining classes B and C, use the `virtual` keyword:
-
+```
 class B : virtual public A { ... };
 class C : virtual public A { ... };
+```
 
 This ensures only one instance of A is inherited by D.
 
-### 2. Explicitly Specify Which Version to Use
+2. **Explicitly Specify Which Version to Use**
+   In class D, explicitly state which version of the method to use:
 
-In class D, explicitly state which version of the method to use:
-
+```
 class D : public B, public C {
 void someMethod() {
 B::someMethod(); // Use B's version
 }
 };
+```
 
-### 3. Override the Method in the Derived Class
+3. **Override the Method in the Derived Class**
+   Provide a new implementation in class D that resolves the ambiguity:
 
-Provide a new implementation in class D that resolves the ambiguity:
-
+```
 class D : public B, public C {
 void someMethod() {
 // New implementation that may call B::someMethod() or C::someMethod()
 }
 };
+```
 
-### 4. Use Composition Instead of Multiple Inheritance
-
-Redesign the class hierarchy to avoid multiple inheritance altogether.
+4. **Use Composition Instead of Multiple Inheritance**
+   Redesign the class hierarchy to avoid multiple inheritance altogether.
 
 - **Benefits of Inheritance**
   1. **Code Reuse**: Inheritance allows code to be reused by creating a base class and derived classes.
