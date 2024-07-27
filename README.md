@@ -16,6 +16,7 @@ Welcome to the Object-Oriented Programming (OOP) Mastery Hub! This repository is
 4. [Destructor](#destructor)
 5. [Inheritance](#inheritance)
 6. [Polymorphism](#polymorphism)
+7. [Abstraction]($abstraction)
 
 ## Basics of OOP
 
@@ -85,3 +86,15 @@ Polymorphism is the ability of objects of different classes to respond to the sa
 - **Run Time**: Achieved through virtual functions and inheritance, allowing objects to be treated as instances of their base class and the appropriate method to be called based on the actual object type at runtime.
   1. **Function Overriding**: Redefining a base class method in a derived class with the same signature.
   2. **Virtual Function**: A function declared in a base class that can be overridden in derived classes, enabling runtime polymorphism. Declare with keyword `virtual` with function in base class.
+
+## Abstraction
+
+Abstraction is the process of hiding complex implementation details and showing only the essential features of an object or system.
+
+- **Using Access Modifiers**: Control the visibility and accessibility of class members.
+
+  1. **Public**: Members are accessible from outside the class.
+  2. **Private**: Members are accessible only within the class.
+  3. **Protected**: Members are accessible within the class and its derived classes.
+
+- **Abstract Class**: A class that cannot be instantiated and is designed to be inherited by other classes, provides only template to other classes. A class which contains a `Pure Virtual Function` is a Abstract Class.
