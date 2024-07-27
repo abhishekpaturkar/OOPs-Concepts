@@ -17,6 +17,7 @@ Welcome to the Object-Oriented Programming (OOP) Mastery Hub! This repository is
 5. [Inheritance](#inheritance)
 6. [Polymorphism](#polymorphism)
 7. [Abstraction]($abstraction)
+8. [Static Keyword](#static-keyword)
 
 ## Basics of OOP
 
@@ -98,3 +99,15 @@ Abstraction is the process of hiding complex implementation details and showing 
   3. **Protected**: Members are accessible within the class and its derived classes.
 
 - **Abstract Class**: A class that cannot be instantiated and is designed to be inherited by other classes, provides only template to other classes. A class which contains a `Pure Virtual Function` is a Abstract Class.
+
+## Static-keyword
+
+The `static` keyword in C++ is used to declare class members that belong to the class itself rather than instances of the class, and to create variables with static storage duration in functions or at global scope.
+
+- **Static Variable**:
+
+  1. **Class-level static variable**: Shared among all instances of a class, initialized only once.
+  2. **Function-level static variable**: Retains its value between function calls.
+  3. **Global static variable**: Limited to the file it's declared in, not accessible from other files.
+
+- **Static Object**: An object with program-wide lifetime, initialized once and retaining its value between function calls. Useful for maintaining state or creating singletons, but requires careful use due to memory consumption and potential threading issues. Declaration `static class-name obeject`
